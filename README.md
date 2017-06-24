@@ -4,9 +4,9 @@ This is a very simple GOLANG web server that hosts the same content via 4 protoc
 * http2 (port 8082)
 * QUIC (port 8083)
 
-It can be used to show large-scale differences in protocol perfomance (e. g. quic is a lot faster when >1% packets are lost).
+It can be used to show large-scale differences in protocol performance (e. g. quic is a lot faster when >1% packets are lost).
 
-It is not at all suitable for benchmarking, because atm no open-source quic implementaion is optimised for perfomance (neither client nor server).
+It is not at all suitable for benchmarking because atm no open-source quic implementation is optimised for performance (neither client nor server).
 
 To run this server you will have to put relevant certificates in a folder specified in `getSslFiles()` (todo: accept cert paths as args) and install all dependencies for this app (`go get ./...`).
 
