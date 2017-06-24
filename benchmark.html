@@ -72,10 +72,10 @@
 	<main>
 		<h3>Case 1: 1000 files async</h3>
 		<p>1000 png images, fetch api</p>
-		<input type="button" value="HTTP/1.1" onclick="requestImgs('http', '8080', 'FB_Color.png', 1000)"> 
-		<input type="button" value="HTTP/1.1 TLS" onclick="requestImgs('https', '8081', 'FB_Color.png', 1000)"> 
-		<input type="button" value="HTTP/2" onclick="requestImgs('https', '8082', 'FB_Color.png', 1000)"> 
-		<input type="button" value="QUIC" onclick="requestImgs('https', '8083', 'FB_Color.png', 1000)"> 
+		<input type="button" value="HTTP/1.1" onclick="requestImgs('http', '8080', 'cross.png', 1000)"> 
+		<input type="button" value="HTTP/1.1 TLS" onclick="requestImgs('https', '8081', 'cross.png', 1000)"> 
+		<input type="button" value="HTTP/2" onclick="requestImgs('https', '8082', 'cross.png', 1000)"> 
+		<input type="button" value="QUIC" onclick="requestImgs('https', '8083', 'cross.png', 1000)"> 
 		<p id="timer">Load time:</p> 
 		<div id="dynamic"></div>
 		<h3>Case 2: Big file</h3>
