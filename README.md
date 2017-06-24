@@ -1,4 +1,4 @@
-This is a very simple web server that hosts the same content via 4 protocols:
+This is a very simple GOLANG web server that hosts the same content via 4 protocols:
 * http1.1 (port 8080)
 * http1.1 + tls (port 8081)
 * http2 (port 8082)
