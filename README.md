@@ -13,3 +13,5 @@ To run this server you will have to put relevant certificates in a folder specif
 Two html pages were made to showcase protocol differences from *.nikitin.su. In order to reuse these demo pages feel free to find-and-replace `nikitin.su` and go from there: 
 * /benchmark — runs a few demo cases for each protocol
 * /ui — runs some pseudo-cache demo of http prefetching capabilities
+
+If you have any questions at all — please open an issue.
