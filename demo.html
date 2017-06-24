@@ -1,0 +1,53 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>demo</title>
+	<link rel="stylesheet" href="https://unpkg.com/awsm.css/dist/awsm.min.css">
+	<link href="https://fonts.googleapis.com/css?family=PT Sans|PT Serif:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+	<style>
+		#dynamic{
+			background-color: #eff;
+			width: 600px;
+			height: 240px;
+		}
+		#dynamic img{
+			float:left;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h5>demo frame $transport$/$port$ ($protocol$)</h5>
+		<p id="timer">Load time: <span></span> ms.</p> 
+		<div id="dynamic"></div>
+	</main>
+	<script>
+		function updateTimer(timer, time){
+			timer.innerHTML = time; 
+		}
+		
+		var imageContainer = document.querySelector('div#dynamic');
+		var timerText = document.querySelector('p#timer>span');
+		var start = performance.now();
+	
+		var scheme = '$scheme$';
+		var hostname = '$hostname$'
+		var filename = 'FB_Color.png';
+		var count = 1000;
+		
+		for (i = 0; i < count; i++){
+			var img = document.createElement("img");
+			img.style.width = "12px";
+			img.onload = function(){
+				updateTimer(timerText, performance.now() - start);
+			 }
+ 			img.onerror = function(){
+ 				updateTimer(timerText, performance.now() - start);
+ 			 }
+			img.src = scheme +'://' + hostname + '/static/' + filename + '?' + Math.random()
+			imageContainer.appendChild(img);
+		}
+	</script>
+</body>
+</html>
