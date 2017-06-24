@@ -179,11 +179,15 @@ func modifiedFileServer(h http.Handler) http.HandlerFunc {
 	}
 }
 
+// func getSslFiles() (string, string) {
+// 	if runtime.GOOS == "linux" {
+// 		return "/home/jim/ssl/vps.nikitin.su/fullchain1.pem",
+// 			"/home/jim/ssl/vps.nikitin.su/privkey1.pem"
+// 	}
+// 	return "ssl/server.crt", "ssl/server.key"
+// }
+
 func getSslFiles() (string, string) {
-	if runtime.GOOS == "linux" {
-		return "/home/jim/ssl/vps.nikitin.su/fullchain1.pem",
-			"/home/jim/ssl/vps.nikitin.su/privkey1.pem"
-	}
 	return "ssl/server.crt", "ssl/server.key"
 }
 
