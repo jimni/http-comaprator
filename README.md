@@ -1,3 +1,4 @@
+###### HTTP1/HTTP2/QUIC DEMO SERVER
 This is a very simple GOLANG web server that hosts the same content via 4 protocols:
 * http1.1 (port 8080)
 * http1.1 + tls (port 8081)
@@ -15,3 +16,9 @@ Two html pages were made to showcase protocol differences from *.nikitin.su. In 
 * /ui — runs some pseudo-cache demo of http prefetching capabilities
 
 If you have any questions at all — please open an issue.
+
+###### QUIC CLIENT
+A convenient way of accessing QUIC pages from a Mac is running Chrome (tested on v.58) with a few command line parameters:
+```
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-data-dir=/tmp/chrome --enable-quic --origin-to-force-quic-on=your.quic.domain:8083
+```
